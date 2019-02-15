@@ -382,12 +382,18 @@ static int get_type_from_string(const char *str) {
 #endif
 	} else if (!strcasecmp(str, "int")) {
 		return IS_LONG;
+	} else if (!strcasecmp(str, "long")) {
+		return IS_LONG;
 	} else if (!strcasecmp(str, "float")) {
+		return IS_DOUBLE;
+	} else if (!strcasecmp(str, "double")) {
 		return IS_DOUBLE;
 	} else if (!strcasecmp(str, "string")) {
 		return IS_STRING;
 	} else if (!strcasecmp(str, "array")) {
 		return IS_ARRAY;
+	} else if (!strcasecmp(str, "object")) {
+		return IS_OBJECT;
 	} else if (!strcasecmp(str, "resource")) {
 		return IS_RESOURCE;
 	} else {
